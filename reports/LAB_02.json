@@ -1,0 +1,186 @@
+{
+  "lab": "02",
+  "schema": {
+    "args_representation": null,
+    "optional_fields": null,
+    "union_types": null,
+    "strict_compiles": null
+  },
+  "fixture_validation": [
+    {
+      "plan": "good_export_fix.json",
+      "valid": null,
+      "failures": null
+    },
+    {
+      "plan": "good_triage.json",
+      "valid": null,
+      "failures": null
+    },
+    {
+      "plan": "s18_specimen.json",
+      "valid": null,
+      "failures": null
+    }
+  ],
+  "ladder": {
+    "looping": {
+      "q1": {
+        "fired": null,
+        "ids": []
+      },
+      "q2": {
+        "fired": null,
+        "ids": []
+      },
+      "q3": {
+        "fired": null,
+        "ids": []
+      }
+    },
+    "s49": {
+      "q1": {
+        "fired": null,
+        "ids": []
+      },
+      "q2": {
+        "fired": null,
+        "ids": []
+      },
+      "q3": {
+        "fired": null,
+        "ids": []
+      }
+    }
+  },
+  "diff_s49": {
+    "steps": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null
+    },
+    "extra": []
+  },
+  "results": {
+    "agent": {
+      "runs": null,
+      "passes": null,
+      "per_issue": {
+        "4201": null,
+        "4202": null,
+        "4203": null,
+        "4204": null,
+        "4205": null,
+        "4206": null
+      },
+      "sweep_min": null,
+      "sweep_max": null,
+      "mean_tokens": null,
+      "p50_latency_s": null,
+      "max_latency_s": null,
+      "plan_overhead_share": null,
+      "critique_overhead_share": null,
+      "runs_with_repeat": null,
+      "off_plan": null,
+      "revisions_mean": null,
+      "revisions_max": null,
+      "rounds_mean": null,
+      "rounds_max": null,
+      "drafts_changed": null,
+      "drafts_fixed": null,
+      "drafts_broken": null,
+      "drafts_held": null
+    },
+    "planned_off": {
+      "runs": null,
+      "passes": null,
+      "per_issue": {
+        "4201": null,
+        "4202": null,
+        "4203": null,
+        "4204": null,
+        "4205": null,
+        "4206": null
+      },
+      "sweep_min": null,
+      "sweep_max": null,
+      "mean_tokens": null,
+      "p50_latency_s": null,
+      "max_latency_s": null,
+      "plan_overhead_share": null,
+      "critique_overhead_share": null,
+      "runs_with_repeat": null,
+      "off_plan": null,
+      "revisions_mean": null,
+      "revisions_max": null,
+      "rounds_mean": null,
+      "rounds_max": null,
+      "drafts_changed": null,
+      "drafts_fixed": null,
+      "drafts_broken": null,
+      "drafts_held": null
+    },
+    "planned_self": {
+      "runs": null,
+      "passes": null,
+      "per_issue": {
+        "4201": null,
+        "4202": null,
+        "4203": null,
+        "4204": null,
+        "4205": null,
+        "4206": null
+      },
+      "sweep_min": null,
+      "sweep_max": null,
+      "mean_tokens": null,
+      "p50_latency_s": null,
+      "max_latency_s": null,
+      "plan_overhead_share": null,
+      "critique_overhead_share": null,
+      "runs_with_repeat": null,
+      "off_plan": null,
+      "revisions_mean": null,
+      "revisions_max": null,
+      "rounds_mean": null,
+      "rounds_max": null,
+      "drafts_changed": null,
+      "drafts_fixed": null,
+      "drafts_broken": null,
+      "drafts_held": null
+    },
+    "planned_external": {
+      "runs": null,
+      "passes": null,
+      "per_issue": {
+        "4201": null,
+        "4202": null,
+        "4203": null,
+        "4204": null,
+        "4205": null,
+        "4206": null
+      },
+      "sweep_min": null,
+      "sweep_max": null,
+      "mean_tokens": null,
+      "p50_latency_s": null,
+      "max_latency_s": null,
+      "plan_overhead_share": null,
+      "critique_overhead_share": null,
+      "runs_with_repeat": null,
+      "off_plan": null,
+      "revisions_mean": null,
+      "revisions_max": null,
+      "rounds_mean": null,
+      "rounds_max": null,
+      "drafts_changed": null,
+      "drafts_fixed": null,
+      "drafts_broken": null,
+      "drafts_held": null
+    }
+  },
+  "context": []
+}
