@@ -1,0 +1,47 @@
+{
+ "about": "RepoMind's progress file for this run, written by the harness after every step. It is a record of what the run has already done, not a to-do list: steps_done are the plan steps that have run, and paths are the files this run has already seen, because a search returned them or the run read them.",
+ "issue": 4204,
+ "plan_version": 2,
+ "steps_done": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "steps": [
+  {
+   "id": 1,
+   "status": "done"
+  },
+  {
+   "id": 2,
+   "status": "done"
+  },
+  {
+   "id": 3,
+   "status": "done"
+  },
+  {
+   "id": 4,
+   "status": "done"
+  },
+  {
+   "id": 5,
+   "status": "done"
+  }
+ ],
+ "paths": [
+  "docs/API.md",
+  "src/api/users.ts",
+  "src/db/migrations/003_timezone.sql",
+  "src/db/repos/userRepo.ts",
+  "src/notifications/rollup.ts",
+  "src/types.ts",
+  "CHANGELOG.md",
+  "README.md",
+  "docs/ARCHITECTURE.md",
+  "src/db/migrations/001_init.sql",
+  "src/i18n/en.json"
+ ]
+}

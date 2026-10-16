@@ -28,6 +28,35 @@ fails is rejected, re-planned up to your bound, then escalated. Never executed.
 
 from __future__ import annotations
 
+from agent.loop import load_bounds
+
+
+def _blank(value) -> bool:
+    return value is None or not str(value).strip()
+
 
 def validate(plan: dict) -> dict:
-    raise NotImplementedError("Assignment 2 Part B: the four checks")
+    steps = plan.get("steps") if isinstance(plan, dict) else None
+    steps = [s for s in steps if isinstance(s, dict)] if isinstance(steps, list) else []
+    meta = plan.get("meta") if isinstance(plan, dict) else None
+    tools = set((meta or {}).get("tools") or [])
+
+    position: dict[str, int] = {}
+    for i, step in enumerate(steps):
+        position.setdefault(str(step.get("id")), i)
+
+    failures = []
+    for i, step in enumerate(steps):
+        sid, tool = step.get("id"), step.get("tool")
+        if not _blank(tool) and tool not in tools:
+            failures.append({"step": sid, "check": 1})
+
+        if any(position.get(str(d), len(steps)) >= i for d in step.get("depends_on") or []):
+            failures.append({"step": sid, "check": 2})
+
+        if _blank(tool) or _blank(step.get("expected_result")):
+            failures.append({"step": sid, "check": 3})
+
+    if not 1 <= len(steps) <= load_bounds().max_steps:
+        failures.append({"step": None, "check": 4})
+    return {"valid": not failures, "failures": failures}

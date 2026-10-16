@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "description": "A RepoMind triage plan: the steps, in the order they run. Every field is required and nothing else is allowed, so the schema compiles under strict mode with no optional fields and no union types.",
+  "properties": {
+    "steps": {
+      "type": "array",
+      "description": "The steps, in the order they run. The last step posts the triage comment.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "1 for the first step, then 2, 3, ... in order"
+          },
+          "action": {
+            "type": "string",
+            "description": "What the step does, in a few words"
+          },
+          "tool": {
+            "type": "string",
+            "description": "The one tool this step calls; it must be one of the tools offered"
+          },
+          "args_json": {
+            "type": "string",
+            "description": "The tool's arguments as a JSON object encoded in a string, for example {\"query\": \"$fill\"}. Write \"$fill\" for any value that depends on what an earlier step returns"
+          },
+          "depends_on": {
+            "type": "array",
+            "description": "The ids of the earlier steps whose results this step uses; [] for none",
+            "items": {"type": "integer"}
+          },
+          "expected_result": {
+            "type": "string",
+            "description": "What the tool returns when the step worked, something the result can show"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "done", "failed"],
+            "description": "pending when the plan is written; the executor sets done or failed as the step runs"
+          }
+        },
+        "required": ["id", "action", "tool", "args_json", "depends_on", "expected_result", "status"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["steps"],
+  "additionalProperties": false
+}
